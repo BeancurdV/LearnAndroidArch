@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "LearnAndroidArch"
 include(":app")
- 
+include(":vip")
+include(":mall")
+include(":loan")
+include(":common")
