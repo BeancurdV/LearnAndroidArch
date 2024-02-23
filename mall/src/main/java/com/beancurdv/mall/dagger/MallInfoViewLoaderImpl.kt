@@ -6,12 +6,14 @@ import android.view.View
 import android.widget.TextView
 import com.beancurdv.common.dagger.mall.IMallInfoViewLoader
 import javax.inject.Inject
+import javax.inject.Singleton
 
 /**
  *
  *
  * @author  on 2024/2/23
  */
+@Singleton
 class MallInfoViewLoaderImpl @Inject constructor() : IMallInfoViewLoader {
     override fun getMallInfoView(act: Activity): View {
         return TextView(act)

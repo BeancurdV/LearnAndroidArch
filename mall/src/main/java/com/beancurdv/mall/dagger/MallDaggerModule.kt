@@ -3,6 +3,7 @@ package com.beancurdv.mall.dagger
 import com.beancurdv.common.dagger.mall.IMallInfoViewLoader
 import dagger.Binds
 import dagger.Module
+import javax.inject.Singleton
 
 /**
  * MallDaggerModule
@@ -11,6 +12,7 @@ import dagger.Module
  */
 @Module
 interface MallDaggerModule {
+    @Singleton
     @Binds fun bindMallInfoViewLoader(impl:MallInfoViewLoaderImpl): IMallInfoViewLoader
 
 }

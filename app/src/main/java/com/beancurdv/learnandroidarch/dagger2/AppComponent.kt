@@ -11,7 +11,6 @@ import javax.inject.Singleton
  * @author beancurdv on 2024/2/23
  */
 
-@Singleton
 @Component(modules = [SubComponentModule::class])
 interface AppComponent {
     fun mallComponent(): MallComponent.Factory

@@ -11,6 +11,7 @@ import javax.inject.Singleton
  * @author  on 2024/2/23
  */
 
+@Singleton
 @Subcomponent(modules = [MallDaggerModule::class])
 interface MallComponent {
 
@@ -21,5 +22,6 @@ interface MallComponent {
     }
 
 
+    @Singleton
     fun mallInfoLoader(): IMallInfoViewLoader
 }
