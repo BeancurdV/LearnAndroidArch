@@ -28,10 +28,9 @@ class LoanHomeActivity : AppCompatActivity() {
 
     private fun syncVipView() {
         val loader = ServiceLoader.load(IVipInfoViewLoader::class.java)
-        val iterator = loader.iterator()
-        while (iterator.hasNext()) {
-            val vipInfoLoader = iterator.next()
-            mFlContainer.addView(vipInfoLoader.getVipInfoView(this))
+        val vipLoader = if(loader.iterator().hasNext()) loader.iterator().next() else null
+        vipLoader?.getVipInfoView(this)?.run {
+            mFlContainer.addView(this)
         }
     }
 }

@@ -35,6 +35,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        goToLoan()
     }
 
     private fun goToLoan() {
